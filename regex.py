@@ -40,3 +40,14 @@ hasil5 = re.sub(kata_lama, kata_baru,artikel)
 handle = open(nama_file,'w')
 handle.write(hasil5)
 handle.close()
+
+
+def validasi_kartu_kredit(nomor_kartu):
+    if len(nomor_kartu) !=16 :
+        return "tidak valid"
+    elif not re.match(r"^[4-6]\d{15}$", nomor_kartu):
+        return "tidak valid"
+    elif re.search(r"8{4}", nomor_kartu):
+        return 'Valid Platinum'
+    else:
+        return 'Valid Reguler'
