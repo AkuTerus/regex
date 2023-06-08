@@ -22,3 +22,33 @@ Rp 600 ribu Rp 1,2 juta Rp 2,5 juta Rp 4,5 juta
 nomor_kartu = '8888889301746352'
 nomor_kartu = '4111111111111111'
 nomor_kartu = '6677889900112233'
+
+
+
+Buatlah sebuah fungsi cek_kodepose(kodepos) yang dapat memvalidasi kode pos Indonesia dengan memanfaatkan regular expression pada bahasa pemrograman Pyhton.
+
+Kode pos akan dinyatakan valid jika:
+- Kode pos ada pada range 10000 hingga 99999
+- Kode pos tidak berisi 1 digit yang sama yang melangkahi 1 angka lain lebih dari 1 pasang
+- Kode pos tidak berisi digit yang berulang lebih dari 3 secara berurutan
+
+
+Contoh:
+
+
+12145: Angka 1 berulang dimana melangkahi angka 2 (jadi ada 1 pasang digit 1 berulang). Valid
+
+32432:  Tidak ada digit berulang Valid
+
+55252: Angka 5 berulang dimana melangkahi angka 2, dan angka 2 berulang dimana melangkahi angka 5 (jadi ada 2 pasang digit berulang). Tidak Valid
+
+Check:
+12125 = Tidak Valid
+32432 = Valid
+55554 = Tidak Valid
+55155 = Valid
+55151 = Tidak Valid
+55511 = Valid
+
+Pemanggilan
+cek_kodepos('55511')
